@@ -4613,24 +4613,6 @@ public final class Settings {
         public static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
         /** @hide */
-        public static final String AUDIO_PANEL_VIEW_MEDIA = "audio_panel_view_media";
-
-        /** @hide */
-        public static final String AUDIO_PANEL_VIEW_RINGER = "audio_panel_view_ringer";
-
-        /** @hide */
-        public static final String AUDIO_PANEL_VIEW_NOTIFICATION = "audio_panel_view_notification";
-
-        /** @hide */
-        public static final String AUDIO_PANEL_VIEW_ALARM = "audio_panel_view_alarm";
-
-        /** @hide */
-        public static final String AUDIO_PANEL_VIEW_VOICE = "audio_panel_view_voice";
-
-        /** @hide */
-        public static final String AUDIO_PANEL_VIEW_BT_SCO = "audio_panel_view_bt_sco";
-
-        /** @hide */
         public static final String AUDIO_PANEL_VIEW_POSITION = "audio_panel_view_position";
 
         /**
@@ -5579,14 +5561,28 @@ public final class Settings {
          *
          * @hide
          */
-        public static final String QSFOOTER_SHOW_SETTINGS = "qs_footer_show_settings";
+        public static final String QS_FOOTER_SHOW_SETTINGS = "qs_footer_show_settings";
 
         /**
          * Show Running Services icon in QS Footer.
          *
          * @hide
          */
-        public static final String QSFOOTER_SHOW_SERVICES = "qs_footer_show_services";
+        public static final String QS_FOOTER_SHOW_SERVICES = "qs_footer_show_services";
+
+        /**
+         * Show Edit icon in QS Footer.
+         *
+         * @hide
+         */
+        public static final String QS_FOOTER_SHOW_EDIT = "qs_footer_show_edit";
+
+        /**
+         * Show User switcher icon in QS Footer.
+         *
+         * @hide
+         */
+        public static final String QS_FOOTER_SHOW_USER = "qs_footer_show_user";
 
         /**
          * Wheter to play notification sound and vibration if screen is ON
@@ -5646,14 +5642,6 @@ public final class Settings {
         /** @hide */
         public static final Validator RECENTS_COMPONENT_VALIDATOR =
                 new SettingsValidators.InclusiveIntegerRangeValidator(0, 1);
-
-        /**
-         * @hide
-         */
-        public static final String STATUSBAR_HIDE_NOTCH = "statusbar_hide_notch";
-
-        /** @hide */
-        private static final Validator STATUSBAR_HIDE_NOTCH_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**
          * Immersive recents options
@@ -6391,12 +6379,6 @@ public final class Settings {
         public static final String LOCKSCREEN_INFO = "lockscreen_info";
 
         /**
-         * Whether to show or hide the edit icon
-         * @hide
-         */
-        public static final String QS_EDIT_TOGGLE = "qs_edit_toggle";
-
-        /**
          * Control how to handle the display cutout
          * @hide
          */
@@ -6552,7 +6534,6 @@ public final class Settings {
             BURN_IN_PROTECTION_INTERVAL,
             USE_OLD_MOBILETYPE,
             NOTIFICATION_SOUND_VIB_SCREEN_ON,
-            STATUSBAR_HIDE_NOTCH,
             ONE_HAND_MODE_ENABLED,
             STATUSBAR_SHOW_WIFI_ACTIVITY,
             STATUS_BAR_SHOW_TICKER,
@@ -6756,7 +6737,6 @@ public final class Settings {
             PRIVATE_SETTINGS.add(PROXIMITY_AUTO_SPEAKER_DELAY);
             PRIVATE_SETTINGS.add(PROXIMITY_AUTO_SPEAKER_INCALL_ONLY);
             PRIVATE_SETTINGS.add(NOTIFICATION_SOUND_VIB_SCREEN_ON);
-            PRIVATE_SETTINGS.add(STATUSBAR_HIDE_NOTCH);
             PRIVATE_SETTINGS.add(SHOW_LOCKSCREEN_STATUS_BAR);
             PRIVATE_SETTINGS.add(SHOW_LOCKSCREEN_INDICATOR_DISPLAY);
 	        PRIVATE_SETTINGS.add(SHOW_LOCKSCREEN_ICON);
@@ -6938,7 +6918,6 @@ public final class Settings {
             VALIDATORS.put(BURN_IN_PROTECTION_INTERVAL, BURN_IN_PROTECTION_INTERVAL_VALIDATOR);
             VALIDATORS.put(USE_OLD_MOBILETYPE, USE_OLD_MOBILETYPE_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_SOUND_VIB_SCREEN_ON, NOTIFICATION_SOUND_VIB_SCREEN_ON_VALIDATOR);
-            VALIDATORS.put(STATUSBAR_HIDE_NOTCH, STATUSBAR_HIDE_NOTCH_VALIDATOR);
             VALIDATORS.put(ONE_HAND_MODE_ENABLED, ONE_HAND_MODE_ENABLED_VALIDATOR);
             VALIDATORS.put(STATUSBAR_SHOW_WIFI_ACTIVITY, STATUSBAR_SHOW_WIFI_ACTIVITY_VALIDATOR);
             VALIDATORS.put(WEATHER_LOCKSCREEN_UNIT, WEATHER_LOCKSCREEN_UNIT_VALIDATOR);
@@ -15406,6 +15385,18 @@ public final class Settings {
          */
         public static final String LOCATION_SETTINGS_LINK_TO_PERMISSIONS_ENABLED =
                 "location_settings_link_to_permissions_enabled";
+
+        /**
+         * Defines the screen-off animation to display
+         * @hide
+         */
+        public static final String SCREEN_OFF_ANIMATION = "screen_off_animation";
+
+        /**
+         * Whether to show a screen-on animation
+         * @hide
+         */
+        public static final String SCREEN_ON_ANIMATION = "screen_on_animation";
 
         /**
          * Flag to set the waiting time for euicc factory reset inside System > Settings
